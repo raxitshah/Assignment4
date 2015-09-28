@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Router Sample Application</title>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+</head>
+<body data-ng-app="myrouterapp">
+    <div>
+        <header data-ng-include="'templates/nav.html'">
+        </header>
+        <hr/>
+        <div ui-view></div>
+        <hr/>
+        <footer data-ng-include="'templates/footer.html'"></footer>
+    </div>
+    <script src="App.js"></script>
+    <script src="JS/Controller/HomeController.js"></script>
+    <script src="JS/Controller/AboutController.js"></script>
+    <script src="JS/Controller/ContactController.js"></script>
+</body>
+</html>
