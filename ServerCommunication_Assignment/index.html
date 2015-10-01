@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Server Communication</title>
+    <script src="scripts/angular.min.js"></script>
+</head>
+<body data-ng-app="myapp">
+    <div data-ng-controller="homecontroller">
+        <ul data-ng-repeat="item in items">
+            <li>{{item.name}}</li>
+            <li>
+                {{item.email}}
+            </li>
+            <li>
+                {{item.telephone}}
+            </li>
+            <li>
+                {{item.description}}
+            </li>
+            <li>
+                {{item.title}}
+            </li>
+            <li>
+                {{item.date}}
+            </li>
+        </ul>
+    </div>
+    <script src="App.js"></script>
+    <script src="JS/Controller/HomeController.js"></script>
+</body>
+</html>
