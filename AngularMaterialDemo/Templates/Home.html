@@ -1,0 +1,21 @@
+﻿<div class="md-padding">
+    <md-content layout="column" flex class="md-padding">
+    <div>
+        <ul style="list-style:none;" data-ng-repeat="item in tempData | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <li>
+                <div class="dialog-demo-content" layout="row" layout-wrap>
+                    <img src="{{item.image}}" alt="{{item.caption}}" style="width:300px;height: 300px;" data-ng-click="showAdvanced($event,item.htmlSource)" />
+                </div>    
+            </li>
+        </ul>
+    </div>
+    <div style="float:left;margin-left:40px;"><md-button class="md-raised md-primary" style="width: 100px;" data-ng-disabled="currentPage == 0" data-ng-click="currentPage=currentPage-1">
+                                                  Previous
+                                              </md-button>
+        {{currentPage+1}}/{{numberOfPages()}}
+        <md-button class="md-raised md-primary" style="width: 100px;" data-ng-disabled="currentPage >= tempData.length/pageSize - 1" data-ng-click="currentPage=currentPage+1">
+            Next
+        </md-button>
+    </div>
+</md-content>
+</div>
